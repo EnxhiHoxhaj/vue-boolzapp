@@ -11,9 +11,6 @@ main, #background {
     width: 100vw;
     height: 100vh;
 }
-main {
-    position: relative;
-}
 
 #background {
     position: fixed;
@@ -21,13 +18,11 @@ main {
 }
 
 #b-top {
-    width: 100%;
     height: 100px;
     background-color: #009690;
 }
 
 #b-bottom {
-    width: 100%;
     height: calc(100vh - 100px);
     background-color: #dcdbd3;
 }
@@ -35,9 +30,24 @@ main {
 #window {
     width: 80%;
     min-height: 95%;
-    background-color: white;
-    z-index: 200;
-    position: absolute;
+    background-color: #e9ebeb;
+    z-index: 100;
+    position: relative;
     top: 20px;
-    left: calc(50% - 40%)
+    left: calc(50% - 40%);
+    display: flex;
+}
+
+/* STILE PER LA PARTE CENTRALE DELLA PAGINA */
+/* SEZIONE LATERALE: CHAT */
+#chat {
+    width: 30%;
+    min-height: 400px;
+    background-color: #d6d6d6;
+}
+
+#live-chat {
+    width: 70%;
+    min-height: 400px;
+    background-color: #e9ebeb;
 }
