@@ -18,7 +18,7 @@ main, #background {
 }
 
 #b-top {
-    height: 100px;
+    height: 150px;
     background-color: #009690;
 }
 
@@ -39,7 +39,7 @@ main, #background {
 }
 
 /* STILE PER LA PARTE CENTRALE DELLA PAGINA */
-/* SEZIONE LATERALE: CHAT */
+/* contenitori window*/
 #chat {
     width: 30%;
     min-height: 400px;
@@ -49,5 +49,17 @@ main, #background {
 #live-chat {
     width: 70%;
     min-height: 400px;
-    background-color: #e9ebeb;
+    background-color: #5ea0a0;
+}
+
+/* testata con id utente e id contatto */
+
+.bar-id {
+    height: 70px;
+    background-color: #eaeaea;
+}
+
+#notifica {
+    height: 90px;
+    background-color: #8edafc;
 }
