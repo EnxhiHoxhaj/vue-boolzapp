@@ -3,6 +3,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
+    border: solid black 0.01px;
 }
 
 /* stile generico dei container */
@@ -20,6 +21,7 @@ main, #background {
 #b-top {
     height: 150px;
     background-color: #009690;
+
 }
 
 #b-bottom {
@@ -28,8 +30,8 @@ main, #background {
 }
 
 #window {
-    width: 80%;
-    min-height: 95%;
+    width: 80vw;
+    min-height: 95vh;
     background-color: #e9ebeb;
     z-index: 100;
     position: relative;
@@ -41,14 +43,13 @@ main, #background {
 /* STILE PER LA PARTE CENTRALE DELLA PAGINA */
 /* contenitori window*/
 #chat {
-    width: 30%;
-    min-height: 400px;
+    width: 30%;   
     background-color: #d6d6d6;
 }
 
 #live-chat {
     width: 70%;
-    min-height: 400px;
+    height: 95vh;
     background-color: #5ea0a0;
 }
 
@@ -60,6 +61,26 @@ main, #background {
 }
 
 #notifica {
-    height: 90px;
+    height: 85px;
     background-color: #8edafc;
+}
+ 
+.mex-window {
+    width: 100%;
+    background-color: #009690;
+
+}
+.singola-chat {
+    background-color: beige;
+    height: calc(95vh - 60px - 70px);
+
+}
+
+.typing-bar {
+    height: 60px;
+    background-color: #e9ebeb;
+}
+
+.singolo-contatto {
+    background-color: rebeccapurple;
 }
