@@ -119,12 +119,29 @@ main, #background {
 
 #notifica a {
     font-size: 13px;
-    color: gray;
+    color: gray; 
 }
 
 /* barra di ricerca contatti */
+#cerca {
+    border: solid #f5f2f2 6px ;
+    background-color: white;
+    display: flex;
+    align-items: center;
+}
 
+#cerca .fa-solid {
+    color: #b1b1b1;
+    padding: 5px 15px;
+    font-size: 15px;
+    border-right: solid #f5f2f2 0.01px ;
+}
 
+#cerca input {
+    flex-grow: 1;
+    padding: 5px 5px;
+    border-style: none;
+}
 
  
 .mex-window {
