@@ -18,7 +18,7 @@ main, #background {
 }
 
 #b-top {
-    height: 150px;
+    height: 120px;
     background-color: #009690;
 
 }
@@ -42,12 +42,12 @@ main, #background {
 /* STILE PER LA PARTE CENTRALE DELLA PAGINA */
 /* contenitori window*/
 #chat {
-    width: 30%;   
+    width: 35%;   
     background-color: #d6d6d6;
 }
 
 #live-chat {
-    width: 70%;
+    width: 65%;
     height: 95vh;
     background-color: #5ea0a0;
 }
@@ -55,12 +55,16 @@ main, #background {
 /* testata con id utente e id contatto */
 
 .bar-id {
-    height: 70px;
+    height: 60px;
     background-color: #eaeaea;
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px;
+}
+
+#chat .bar-id {
+    border-right: solid #c0bfbf 0.01px;
 }
 
 .bar-icon i, .typing-bar i {
@@ -91,15 +95,37 @@ main, #background {
 }
 
 /* side chat */
-
+/* barra delle notifiche */
 .singolo-contatto {
     background-color: rebeccapurple;
 }
 
 #notifica {
-    height: 85px;
+    height: 75px;
     background-color: #8edafc;
+    display: flex;
+    align-items: center;
+    padding: 5px 15px;
 }
+
+#not_bell {
+    font-size: 20px;
+    padding: 10px;
+    background-color: white;
+    color: #8edafc;
+    border-radius: 60px;
+    margin-right: 15px;
+}
+
+#notifica a {
+    font-size: 13px;
+    color: gray;
+}
+
+/* barra di ricerca contatti */
+
+
+
  
 .mex-window {
     width: 100%;
@@ -108,7 +134,7 @@ main, #background {
 }
 .singola-chat {
     background-color: beige;
-    height: calc(95vh - 60px - 70px);
+    height: calc(95vh - 120px);
     background-image: url(img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
     background-size: cover;
 
