@@ -96,10 +96,6 @@ main, #background {
 
 /* side chat */
 /* barra delle notifiche */
-.singolo-contatto {
-    background-color: rebeccapurple;
-}
-
 #notifica {
     height: 75px;
     background-color: #8edafc;
@@ -143,7 +139,36 @@ main, #background {
     border-style: none;
 }
 
- 
+/* lista dei contatti */
+
+#contatti {
+    background-color: white;
+}
+.singolo-contatto {
+
+    display: flex;
+    padding: 10px 5px 10px 20px ;
+    position: relative;
+}
+
+.profile-photo {
+    width: 60px;
+    margin-right: 20px;
+}
+
+.profile-photo img {
+    width: 100%;
+}
+
+.time-mex {
+    position: absolute;
+    right: 5px;
+}
+
+.time-mex input{
+    border-style: none;
+}
+
 .mex-window {
     width: 100%;
     background-color: #009690;
