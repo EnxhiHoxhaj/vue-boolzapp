@@ -3,7 +3,6 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Lato', sans-serif;
-    border: solid black 0.01px;
 }
 
 /* stile generico dei container */
@@ -58,6 +57,43 @@ main, #background {
 .bar-id {
     height: 70px;
     background-color: #eaeaea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.bar-icon i, .typing-bar i {
+    color: #b1b1b1;
+    font-size: 20px;
+    margin-left: 10px;
+}
+
+.user-attivo {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.avatar-utente {
+    width: 50px ;
+    margin-right: 10px;
+}
+
+.user-barra {
+    width: 100% ;
+}
+
+.entry-time {
+    color: #b1b1b1;
+    font-size: 12px;
+    margin-top: 3px;
+}
+
+/* side chat */
+
+.singolo-contatto {
+    background-color: rebeccapurple;
 }
 
 #notifica {
@@ -73,6 +109,8 @@ main, #background {
 .singola-chat {
     background-color: beige;
     height: calc(95vh - 60px - 70px);
+    background-image: url(img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+    background-size: cover;
 
 }
 
@@ -81,6 +119,3 @@ main, #background {
     background-color: #e9ebeb;
 }
 
-.singolo-contatto {
-    background-color: rebeccapurple;
-}
