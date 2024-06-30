@@ -67,7 +67,7 @@ main, #background {
     border-right: solid #c0bfbf 0.01px;
 }
 
-.bar-icon i, .typing-bar i {
+.bar-icon i {
     color: #b1b1b1;
     font-size: 20px;
     margin-left: 10px;
@@ -147,7 +147,7 @@ main, #background {
 .singolo-contatto {
 
     display: flex;
-    padding: 10px 5px 10px 20px ;
+    padding: 5px 5px 5px 20px ;
     position: relative;
 }
 
@@ -184,6 +184,22 @@ main, #background {
 
 .typing-bar {
     height: 60px;
-    background-color: #e9ebeb;
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 30px 0 20px;
 }
 
+.typing-bar input {
+    width: 85%;
+    height: 70%;
+    border-style: none;
+    font-size: 12px;
+    padding: 0 10px;
+}
+
+.typing-bar i {
+    font-size: 20px;
+    color: rgb(105, 105, 105);
+}
