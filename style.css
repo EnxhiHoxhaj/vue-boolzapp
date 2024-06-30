@@ -124,6 +124,7 @@ main, #background {
     background-color: white;
     display: flex;
     align-items: center;
+    height: 40px;
 }
 
 #cerca .fa-solid {
@@ -143,9 +144,11 @@ main, #background {
 
 #contatti {
     background-color: white;
+    height: calc(95vh - 175px);
+    overflow: auto;
 }
-.singolo-contatto {
 
+.singolo-contatto {
     display: flex;
     padding: 5px 5px 5px 20px ;
     position: relative;
