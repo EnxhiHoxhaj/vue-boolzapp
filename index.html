@@ -34,9 +34,9 @@
                 <header class="bar-id">
                     <div class="user-attivo">
                         <div class="avatar-utente">
-                            <img class="user-barra" src="img/01.png" alt="foto utente">
+                            <img class="user-barra" v-for="user in userAccount" :src="user.avatarUser" alt="foto utente">
                         </div>
-                        <div class="nome">Alice</div>
+                        <div class="nome" v-for="user in userAccount">{{user.nomeUser}}</div>
                     </div>
                     <div class="bar-icon">
                         <i class="fa-solid fa-circle-notch"></i>
@@ -67,10 +67,10 @@
                         </div>
                         <div >
                             <div class="nome-contatto">{{contatto.name}}</div>
-                            <div class="entry-time">ultimo messaggio inviato</div>
+                            <div class="entry-time"></div>
                         </div>
                         <div class="time-mex">
-                            <input type="time" value="12:00" class="entry-time">
+                            <div class="entry-time"></div>
                         </div>
                     </div>
                 </div>
@@ -97,22 +97,13 @@
                     <!-- riquadro contenete le chat singole -->
                     <div class="singola-chat">
                         <div class="sent">
-                            <div class="mex"> ciaooo come va </div>
-                            <input type="time" class="mex-time" value="13:30">
-                        </div>
-                        <div class="sent">
-                            <div class="mex">Che stai facendo?</div>
+                            <div class="mex"></div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
                         <div class="received">
-                            <div class="mex">Guardo la tv</div>
+                            <div class="mex"></div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
-                        <div class="to-asign">
-                            <div class="mex"></div>
-                            <input type="time" class="mex-time" >
-                        </div>
-                        
                     </div>
                     <!-- input di inserimento nuovo messaggio -->
                     <div class="typing-bar">

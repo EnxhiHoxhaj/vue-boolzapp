@@ -5,6 +5,12 @@ const { createApp } = Vue
 createApp ({
     data () {
         return {
+            userAccount: [
+                {
+                    nomeUser: 'Alice',
+                    avatarUser: 'img/01.png',
+                }
+            ],
             contacts: [
                 {
                     name: 'Michele',
@@ -167,7 +173,14 @@ createApp ({
                         }
                     ],
                 }
+                
             ]
         }
+        
+    },
+    mounted () {
+        this.contacts.forEach(contact => {
+          console.log(contact.messages.map(message => message.date));
+        });
     }
 }).mount('#window');
