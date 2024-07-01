@@ -196,6 +196,8 @@ createApp ({
                 message: newMessage,
                 status: 'sent'
               });
+              // Resetta l'input 
+              event.target.value = '';
             }
           }
           
