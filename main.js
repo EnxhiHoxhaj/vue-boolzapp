@@ -180,6 +180,11 @@ createApp ({
         }
         
     },
+    methods: {
+        cambioChat() {
+          this.showContact++; 
+        }
+      }, 
     mounted () {
         console.log(this.contacts[0].avatar)
     }

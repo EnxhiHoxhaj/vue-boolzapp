@@ -214,6 +214,7 @@ main, #background {
     border-style: none;
     font-size: 12px;
     padding: 0 10px;
+    border-radius: 5px;
 }
 
 .typing-bar i {

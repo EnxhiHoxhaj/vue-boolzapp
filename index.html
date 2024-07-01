@@ -61,7 +61,7 @@
                 </div>
                 <!-- lista dei contatti -->
                 <div id="contatti">
-                    <div class="singolo-contatto"  v-for="contatto in contacts" @click="showContact++">
+                    <div class="singolo-contatto"  v-for="contatto in contacts" @click.once="cambioChat">
                         <div class="profile-photo">
                             <img class="avatar" :src="contatto.avatar" alt="immagine profilo">
                         </div>
