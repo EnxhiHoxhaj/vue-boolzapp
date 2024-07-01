@@ -78,12 +78,12 @@
             <!-- sezione con la chat attiva -->
             <section id="live-chat">
                 <header class="bar-id">
-                    <div class="user-attivo" >
+                    <div class="user-attivo">
                         <div class="avatar-utente">
-                            <img  class="user-barra" src="img/06.png" alt="foto utente">
+                            <img  class="user-barra" :src="contacts[0].avatar" alt="foto utente">
                         </div>
                         <div>
-                            <div class="nome">Marco</div>
+                            <div class="nome">{{contacts[0].name}}</div>
                             <div class="entry-time"> Ultima data di accesso oggi alle 12:00</div>
                         </div>
                     </div>

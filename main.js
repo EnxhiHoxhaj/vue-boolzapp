@@ -5,6 +5,8 @@ const { createApp } = Vue
 createApp ({
     data () {
         return {
+            showContact : 0,
+             
             userAccount: [
                 {
                     nomeUser: 'Alice',
@@ -183,6 +185,6 @@ createApp ({
         }
       }, 
     mounted () {
-        console.log(this.contacts[0].name)
+        console.log(this.contacts[0].avatar)
     }
 }).mount('#window');
