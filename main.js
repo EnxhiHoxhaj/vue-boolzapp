@@ -6,7 +6,7 @@ createApp ({
     data () {
         return {
             showContact : 0,
-             
+
             userAccount: [
                 {
                     nomeUser: 'Alice',
@@ -180,10 +180,6 @@ createApp ({
         }
         
     },
-    methods: {
-        nome() {
-        }
-      }, 
     mounted () {
         console.log(this.contacts[0].avatar)
     }

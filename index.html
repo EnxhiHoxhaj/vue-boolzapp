@@ -61,9 +61,9 @@
                 </div>
                 <!-- lista dei contatti -->
                 <div id="contatti">
-                    <div class="singolo-contatto"  v-for="contatto in contacts">
+                    <div class="singolo-contatto"  v-for="contatto in contacts" @click="showContact++">
                         <div class="profile-photo">
-                            <img class="avatar" :src="contatto.avatar" alt="">
+                            <img class="avatar" :src="contatto.avatar" alt="immagine profilo">
                         </div>
                         <div >
                             <div class="nome-contatto">{{contatto.name}}</div>
@@ -80,10 +80,10 @@
                 <header class="bar-id">
                     <div class="user-attivo">
                         <div class="avatar-utente">
-                            <img  class="user-barra" :src="contacts[0].avatar" alt="foto utente">
+                            <img  class="user-barra" :src="contacts[showContact].avatar" alt="foto utente">
                         </div>
                         <div>
-                            <div class="nome">{{contacts[0].name}}</div>
+                            <div class="nome">{{contacts[showContact].name}}</div>
                             <div class="entry-time"> Ultima data di accesso oggi alle 12:00</div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                 <div class="mex-window">
                     <!-- riquadro contenete le chat singole -->
                     <div class="singola-chat">
-                        <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in contacts[0].messages">
+                        <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in contacts[showContact].messages">
                             <div class="mex" >{{message.message}}</div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>

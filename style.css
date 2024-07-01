@@ -157,6 +157,7 @@ main, #background {
 
 .singolo-contatto:hover {
     background-color: rgb(233, 233, 233) ;
+    cursor: pointer;
 
 }
 
