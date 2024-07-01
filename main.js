@@ -181,11 +181,12 @@ createApp ({
         
     },
     methods: {
-        cambioChat() {
-          this.showContact++; 
+        cambioChat(index) {
+          this.showContact= index; 
         }
       }, 
     mounted () {
-        console.log(this.contacts[0].avatar)
+        console.log(this.contacts)
     }
 }).mount('#window');
+
