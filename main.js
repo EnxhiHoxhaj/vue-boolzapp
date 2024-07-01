@@ -189,17 +189,27 @@ createApp ({
         addMessage(event) {
             // condizioni di invio
             if (event.key === 'Enter') {
-              // testo del messaggio dall'input
-              const newMessage = event.target.value;
-              // Aggiungi il nuovo messaggio alla lista dei messaggi del contatto attivo
-              this.contacts[this.showContact].messages.push({
-                message: newMessage,
-                status: 'sent'
-              });
-              // Resetta l'input 
-              event.target.value = '';
+                // testo del messaggio dall'input
+                const newMessage = event.target.value;
+                // Aggiungi il nuovo messaggio alla lista dei messaggi del contatto attivo
+                this.contacts[this.showContact].messages.push({
+                    message: newMessage,
+                    status: 'sent'
+                });
+                // Resetta l'input 
+                event.target.value = '';
+                //   risposta ok dopo 1 secondo
+                setTimeout(() => {
+                    const risContatto = "ok";
+                    this.contacts[this.showContact].messages.push({
+                        message: risContatto,
+                        status: 'received'
+                    });
+                }, "1000");
+                  
+
             }
-          }
+        }
           
     }, 
     mounted () {
