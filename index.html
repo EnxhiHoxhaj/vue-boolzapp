@@ -95,8 +95,8 @@
                 </header>
                 <div class="mex-window">
                     <!-- riquadro contenete le chat singole -->
-                    <div class="singola-chat" v-for="(messaggio, index) in contacts" key="index">
-                        <div class="sent" v-for="(inviati, index, value) in messaggio.messages">
+                    <div class="singola-chat" v-for="(messaggio, index) in contacts" :key="index">
+                        <div class="sent" v-for="(inviati, index) in messaggio.messages" :key="index">
                             <div class="mex" v-if="inviati.status === 'sent'">{{messaggio.messages[index].message}}</div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
