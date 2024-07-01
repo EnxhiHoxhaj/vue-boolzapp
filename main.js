@@ -181,10 +181,25 @@ createApp ({
         
     },
     methods: {
+        // mostrare la chat e il profilo attivo al click del contatto
         cambioChat(index) {
           this.showContact= index; 
-        }
-      }, 
+        },
+
+        addMessage(event) {
+            // condizioni di invio
+            if (event.key === 'Enter') {
+              // testo del messaggio dall'input
+              const newMessage = event.target.value;
+              // Aggiungi il nuovo messaggio alla lista dei messaggi del contatto attivo
+              this.contacts[this.showContact].messages.push({
+                message: newMessage,
+                status: 'sent'
+              });
+            }
+          }
+          
+    }, 
     mounted () {
         console.log(this.contacts)
     }
