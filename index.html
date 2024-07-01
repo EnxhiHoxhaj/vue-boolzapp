@@ -96,12 +96,12 @@
                 <div class="mex-window">
                     <!-- riquadro contenete le chat singole -->
                     <div class="singola-chat" v-for="(messaggio, index) in contacts" key="index">
-                        <div class="sent" v-for="inviati in messaggio.messages">
-                            <div class="mex" v-if="inviati.status === 'sent'">{{messaggio.messages}}</div>
+                        <div class="sent" v-for="(inviati, index, value) in messaggio.messages">
+                            <div class="mex" v-if="inviati.status === 'sent'">{{messaggio.messages[index].message}}</div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
-                        <div class="received" v-for="ricevuti in messaggio.messages">
-                            <div class="mex"  v-if="ricevuti.status === 'received'">{{messaggio.messages}}</div>
+                        <div class="received" v-for="(ricevuti, index) in messaggio.messages">
+                            <div class="mex"  v-if="ricevuti.status === 'received'">{{messaggio.messages[index].message}}</div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
                     </div>
