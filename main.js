@@ -178,9 +178,11 @@ createApp ({
         }
         
     },
+    methods: {
+        nome() {
+        }
+      }, 
     mounted () {
-        this.contacts.forEach(contact => {
-          console.log(contact.messages.map(message => message.message));
-        });
+        console.log(this.contacts[0].name)
     }
 }).mount('#window');
