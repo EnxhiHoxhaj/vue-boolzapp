@@ -63,10 +63,10 @@
                 <div id="contatti">
                     <div class="singolo-contatto"  v-for="contatto in contacts">
                         <div class="profile-photo">
-                            <img class="avatar" src="" alt="">
+                            <img class="avatar" :src="contatto.avatar" alt="">
                         </div>
                         <div >
-                            <div class="nome-contatto"></div>
+                            <div class="nome-contatto">{{contatto.name}}</div>
                             <div class="entry-time">ultimo messaggio inviato</div>
                         </div>
                         <div class="time-mex">
