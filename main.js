@@ -1,11 +1,11 @@
 
 
-const {createApp} = Vue;
+const { createApp } = Vue
 
 createApp ({
-    date () {
+    data () {
         return {
-            contacts : [
+            contacts: [
                 {
                     name: 'Michele',
                     avatar: 'img/05.png',
@@ -74,7 +74,7 @@ createApp ({
                 },
                 {
                     name: 'Alessandra B.',
-                    avatar: './img/03',
+                    avatar: 'img/03.png',
                     visible: true,
                     messages: [
                         {
@@ -91,7 +91,7 @@ createApp ({
                 },
                 {
                     name: 'Alessandro L.',
-                    avatar: './img/04.png',
+                    avatar: 'img/04.png',
                     visible: true,
                     messages: [
                         {
@@ -130,7 +130,7 @@ createApp ({
                 },
                 {
                     name: 'Federico',
-                    avatar: './img/08',
+                    avatar: 'img/08.png',
                     visible: true,
                     messages: [
                         {
@@ -147,7 +147,7 @@ createApp ({
                 },
                 {
                     name: 'Davide',
-                    avatar: './img/avatar_8.png',
+                    avatar: 'img/02.png',
                     visible: true,
                     messages: [
                         {
@@ -170,4 +170,4 @@ createApp ({
             ]
         }
     }
-})
+}).mount('#window');

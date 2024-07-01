@@ -17,7 +17,7 @@
 </head>
 <body>
     <!-- contenitore principale della web app -->
-    <main>
+    <main id="app">
         <!-- sfondo in background della web app -->
         <div id="background">
             <!-- fascia superiore verde -->
@@ -61,12 +61,12 @@
                 </div>
                 <!-- lista dei contatti -->
                 <div id="contatti">
-                    <div class="singolo-contatto">
+                    <div class="singolo-contatto"  v-for="contatto in contacts">
                         <div class="profile-photo">
-                            <img class="avatar" src="img/03.png" alt="">
+                            <img class="avatar" src="" alt="">
                         </div>
-                        <div>
-                            <div class="nome-contatto">Michela</div>
+                        <div >
+                            <div class="nome-contatto"></div>
                             <div class="entry-time">ultimo messaggio inviato</div>
                         </div>
                         <div class="time-mex">
