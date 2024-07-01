@@ -67,7 +67,7 @@
                         </div>
                         <div >
                             <div class="nome-contatto">{{contatto.name}}</div>
-                            <div class="entry-time"></div>
+                            <div class="entry-time">Ultimo messaggio inviato</div>
                         </div>
                         <div class="time-mex">
                             <div class="entry-time"></div>
@@ -95,13 +95,13 @@
                 </header>
                 <div class="mex-window">
                     <!-- riquadro contenete le chat singole -->
-                    <div class="singola-chat">
-                        <div class="sent">
-                            <div class="mex"></div>
+                    <div class="singola-chat" v-for="(messaggio, index) in contacts" key="index">
+                        <div class="sent" v-for="inviati in messaggio.messages">
+                            <div class="mex">{{messaggio.messages}}</div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
-                        <div class="received">
-                            <div class="mex"></div>
+                        <div class="received" v-for="ricevuti in messaggio.messages">
+                            <div class="mex">{{messaggio.messages}}</div>
                             <input type="time" class="mex-time" value="13:30">
                         </div>
                     </div>

@@ -180,7 +180,7 @@ createApp ({
     },
     mounted () {
         this.contacts.forEach(contact => {
-          console.log(contact.messages.map(message => message.date));
+          console.log(contact.messages.map(message => message.message));
         });
     }
 }).mount('#window');
