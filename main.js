@@ -7,6 +7,8 @@ createApp ({
         return {
             showContact : 0,
 
+            cercaContatto: '',
+
             userAccount: [
                 {
                     nomeUser: 'Alice',
@@ -209,11 +211,19 @@ createApp ({
                   
 
             }
-        }
-          
+        },
+
     }, 
     mounted () {
         console.log(this.contacts)
+    },
+    computed : {
+        filteredContacts() {
+            return this.contacts.filter(contatto => {
+                return contatto.name.toLowerCase().includes(this.cercaContatto.toLowerCase());
+            });
+        }
     }
+
 }).mount('#window');
 
