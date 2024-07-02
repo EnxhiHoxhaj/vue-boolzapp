@@ -207,7 +207,7 @@ createApp ({
                         message: risContatto,
                         status: 'received'
                     });
-                }, "1000");
+                }, 1000);
                   
 
             }
@@ -220,7 +220,12 @@ createApp ({
     computed : {
         filteredContacts() {
             return this.contacts.filter(contatto => {
-                return contatto.name.toLowerCase().includes(this.cercaContatto.toLowerCase());
+                if (contatto.name.toLowerCase().includes(this.cercaContatto.toLowerCase())) {
+                    return contatto;
+                } else {
+                    return [];
+                }
+                
             });
         }
     }

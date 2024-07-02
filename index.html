@@ -80,10 +80,10 @@
                 <header class="bar-id">
                     <div class="user-attivo">
                         <div class="avatar-utente">
-                            <img  class="user-barra" :src="contacts[showContact].avatar" alt="foto utente">
+                            <img  class="user-barra" :src="filteredContacts[showContact].avatar" alt="foto utente">
                         </div>
                         <div>
-                            <div class="nome">{{contacts[showContact].name}}</div>
+                            <div class="nome">{{filteredContacts[showContact].name}}</div>
                             <div class="entry-time"> Ultima data di accesso oggi alle 12:00</div>
                         </div>
                     </div>
@@ -96,7 +96,7 @@
                 <div class="mex-window">
                     <!-- riquadro contenete le chat singole -->
                     <div class="singola-chat">
-                        <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in contacts[showContact].messages">
+                        <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in filteredContacts[showContact].messages">
                             <div class="mex" >{{message.message}}</div>
                             <input type="time" class="mex-time" value="13:00">
                         </div>
