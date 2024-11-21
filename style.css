@@ -7,36 +7,26 @@
 
 /* stile generico dei container */
 
-main, #background {
+main {
     width: 100vw;
     height: 100vh;
-}
-
-#background {
-    position: fixed;
-    z-index: -100;
-}
-
-#b-top {
-    height: 120px;
-    background-color: #009690;
-
-}
-
-#b-bottom {
-    height: calc(100vh - 100px);
-    background-color: #dcdbd3;
+    background-image: url('img/light-purple-blurred-background-with-glow_1258-41341.jpg');
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
 }
 
 #window {
-    width: 80vw;
-    min-height: 95vh;
-    background-color: #e9ebeb;
-    z-index: 100;
-    position: relative;
-    top: 20px;
-    left: calc(50% - 40%);
+    width: 95vw;
+    height: 95vh; 
+    margin: 0; 
+    padding: 0; 
     display: flex;
+    overflow: hidden;
+    border-radius: 10px;
 }
 
 /* STILE PER LA PARTE CENTRALE DELLA PAGINA */
@@ -48,23 +38,25 @@ main, #background {
 
 #live-chat {
     width: 65%;
-    height: 95vh;
-    background-color: #5ea0a0;
+}
+#chat, #live-chat {
+    height: 100%;
 }
 
 /* testata con id utente e id contatto */
 
 .bar-id {
-    height: 60px;
-    background-color: #eaeaea;
+    height: 65px;
+    background-color:#1e1f23 ;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px;
+    padding: 13px;
 }
 
 #chat .bar-id {
-    border-right: solid #c0bfbf 0.01px;
+    border-right: 1px solid #c0bfbf;
+
 }
 
 .bar-icon i {
@@ -144,19 +136,20 @@ main, #background {
 
 #contatti {
     background-color: white;
-    height: calc(95vh - 175px);
+    height: calc(80vh - 175px);
     overflow: auto;
 }
 
 .singolo-contatto {
+    background-color: #2c2d31;
     display: flex;
-    padding: 5px 5px 5px 20px ;
+    padding: 10px 5px 10px 20px ;
     position: relative;
     border-bottom: solid rgb(233, 233, 233) 0.1px;
 }
 
 .singolo-contatto:hover {
-    background-color: rgb(233, 233, 233) ;
+    background-color: transparent ;
     cursor: pointer;
 
 }
@@ -188,9 +181,8 @@ main, #background {
 
 }
 .singola-chat {
-    background-color: beige;
     height: calc(95vh - 120px);
-    background-image: url(img/28719144-86dc0f70-73b1-11e7-911d-60d70fcded21.png);
+    background-color: #323338;
     background-size: cover;
     overflow: auto;
     display: flex;
