@@ -200,16 +200,28 @@ createApp ({
                 });
                 // Resetta l'input 
                 event.target.value = '';
-                //   risposta ok dopo 1 secondo
+                // Array di risposte casuali
+                const risposte = [
+                    "Certo!",
+                    "Come vuoi tu!",
+                    "Non sono sicuro.",
+                    "Vediamo domani.",
+                    "Fantastico!",
+                    "Puoi ripetere?",
+                    "Interessante!",
+                    "Non lo so, scusa.",
+                    "Possiamo parlarne dopo?",
+                    "Ottima idea!",
+                    "Sono d'accordo!"
+                ];
                 setTimeout(() => {
-                    const risContatto = "ok";
+                    const risContatto = risposte[Math.floor(Math.random() * risposte.length)];
                     this.contacts[this.showContact].messages.push({
                         message: risContatto,
                         status: 'received'
                     });
                 }, 1000);
                   
-
             }
         },
 
@@ -220,15 +232,9 @@ createApp ({
     computed : {
         filteredContacts() {
             return this.contacts.filter(contatto => {
-                if (contatto.name.toLowerCase().includes(this.cercaContatto.toLowerCase())) {
-                    return contatto;
-                } else {
-                    return [];
-                }
-                
+               return contatto.name.toLowerCase().includes(this.cercaContatto.toLowerCase())
             });
         }
-    }
-
+    },
 }).mount('#window');
 
