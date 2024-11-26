@@ -31,8 +31,7 @@
                         <div class="nome" v-for="user in userAccount">{{user.nomeUser}}</div>
                     </div>
                     <div class="bar-icon">
-                        <i class="fa-solid fa-circle-notch"></i>
-                        <i class="fa-solid fa-message"></i>
+                        <i class="fa-regular fa-comment"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
@@ -59,12 +58,13 @@
                         </div>
                         <div >
                             <div class="nome-contatto">{{contatto.name}}</div>
-                            <div class="entry-time">Ultimo messaggio inviato</div>
-                        </div>
-                        <div class="time-mex">
-                            <input type="time" class="mex-time" value="12:00">
+                            <div class="entry-time">Ultimo messaggio alle {{ getLastMessageDate(contatto) }}</div>
                         </div>
                     </div>
+                </div>
+                <div id="chat-bar">
+                    <i class="fa-solid fa-gear"></i>
+                    <i class="fa-solid fa-comments"></i>
                 </div>
             </section>
             <!-- sezione con la chat attiva -->
@@ -89,8 +89,8 @@
                     <!-- riquadro contenete le chat singole -->
                     <div class="singola-chat">
                         <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in filteredContacts[showContact].messages">
-                            <div class="mex" >{{message.message}}</div>
-                            <input type="time" class="mex-time" value="13:00">
+                            <div class="mex">{{ message.message }}</div>
+                            <span class="mex-time">{{ formatDate(message.date) }}</span>
                         </div>
                     </div>
                     <!-- input di inserimento nuovo messaggio -->
