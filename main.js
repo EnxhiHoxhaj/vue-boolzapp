@@ -357,6 +357,12 @@ createApp({
                 const lastMessage = contact.messages[contact.messages.length - 1];
                 return this.formatDate(lastMessage.date);
             }
+        },
+        getLastMessageText(contact) {
+            if (contact.messages && contact.messages.length > 0) {
+                const lastText = contact.messages[contact.messages.length - 1];
+                return lastText?.message || 'Messaggio non disponibile';
+            }
             return 'Nessun messaggio';
         }
         

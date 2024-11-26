@@ -6,17 +6,24 @@
 }
 
 /* stile generico dei container */
-
-#window {
+main{
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100vw;
     height: 100vh;
+    background-color: #343236;
+
+}
+
+#window {
+    width: 98vw;
+    height: 96vh;
     margin: 0; 
     padding: 0; 
     display: flex;
-    overflow: hidden;
-    margin: 0; 
-    padding: 0; 
-
+    overflow: hidden; 
+    border-radius: 5px;
 }
 
 /* STILE PER LA PARTE CENTRALE DELLA PAGINA */
@@ -24,10 +31,11 @@
 #chat {
     width: 30%;   
     background-color: #d6d6d6;
+    display: flex;
 }
 
 #live-chat {
-    width: 70%;
+    width: 70%
 }
 #chat, #live-chat {
     height: 100%;
@@ -47,27 +55,40 @@
 
 #chat .bar-id {
     border-right: 1px solid #21366e;
+    width: 15%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+}
 
+.bot-cont{
+    width: 85%;
+    background-color: ;
 }
  
 i {
-    color: #ffff;
+    color: #dbe3e7;
 }
 
 .bar-icon i {
     font-size: 20px;
-    margin-left: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 30px;
 }
 
 .user-attivo {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    justify-content: center;
+    gap: 15px;
 }
 
 .avatar-utente {
-    width: 50px ;
-    margin-right: 10px;
+    width: 45px ;
 }
 
 .user-barra {
@@ -81,21 +102,18 @@ i {
 
 /* side chat */
 /* barra delle notifiche */
+
+.tit{
+    font-size: 18px;
+    padding: 15px 0;
+    background-color: #14214b;;
+}
 #notifica {
-    height: 75px;
-    background-color: #99c4e1;
+    height: 55px;
     display: flex;
     align-items: center;
     padding: 5px 15px;
-}
-
-#not_bell {
-    font-size: 20px;
-    padding: 10px;
-    background-color: #eaeff3;
-    color: #99c4e1;
-    border-radius: 60px;
-    margin-right: 15px;
+    background-color: #14214b;;
 }
 
 #notifica a {
@@ -103,10 +121,23 @@ i {
     color: gray; 
 }
 
+#not_bell {
+    font-size: 20px;
+    padding: 8px;
+    background-color: #99c4e1;
+    border-radius: 50px;
+    margin-right: 15px;
+}
+
+.fa-bell-slash{
+        color: #14214b;
+        font-size: 18px;
+}
+
 /* barra di ricerca contatti */
 #cerca {
     border: solid #f5f2f2 6px ;
-    background-color: #eaeff3;
+    background-color: #14214b;;
     display: flex;
     align-items: center;
     height: 40px;
@@ -129,24 +160,10 @@ i {
 
 #contatti {
     background-color: #0e1326;
-    height: calc(100vh - 175px);
+    height: calc(98vh - 135px);
     overflow: auto;
     border-right: solid #21366e 0.1px;
-    padding-bottom: 61px;
-}
-
-#chat-bar {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 20%;
-    height: 55px;
-    background-color: #0e1326;
-    color: #fff;
-    z-index: 10;
-    padding: 0;
-    border-right: solid #21366e 0.1px;
-    
+    padding-bottom: 10px ;
 }
 
 .singolo-contatto {
@@ -198,8 +215,7 @@ i {
 /* live chat section */
 
 .singola-chat {
-    height: calc(100vh - 120px);
-    background-image:radial-gradient(#8d7599, #14214b);
+    height: calc(96vh - 125px);
     background-size: cover;
     overflow: auto;
     display: flex;
@@ -209,6 +225,23 @@ i {
 }
 .singola-chat .mex-time{
     color: #0e1326;
+}
+
+.mex-window{
+    position: relative;
+}
+.background {
+    background-image: url('img/68747470733a2f2f7765622e77686174736170702e636f6d2f696d672f62672d636861742d74696c652d6461726b5f61346265353132653731393562366237333364393131306234303866303735642e706e67.png');
+    height: calc(96vh - 125px);
+    position: absolute;
+    width: 100%;
+    filter: opacity(15%);
+}
+
+.col {
+    background-image:radial-gradient(#8d7599, #14214b);
+    filter: opacity(100%);
+
 }
 
 .typing-bar {

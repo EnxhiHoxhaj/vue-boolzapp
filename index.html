@@ -23,48 +23,53 @@
             <!-- sezione laterale dedicata alle chat  -->
             <section id="chat">
                 <!-- profilo dell'utente -->
-                <header class="bar-id">
+                <div class="bar-id">
+                    <div class="bar-icon">
+                        <i class="fa-solid fa-comment"></i>
+                        <i class="fa-solid fa-icons"></i>
+                        <i class="fa-solid fa-users-rectangle"></i>
+                    </div>
                     <div class="user-attivo">
+                        <div class="bar-icon">
+                            <i class="fa-solid fa-gear"></i>
+                        </div>
                         <div class="avatar-utente">
                             <img class="user-barra" v-for="user in userAccount" :src="user.avatarUser" alt="foto utente">
                         </div>
-                        <div class="nome" v-for="user in userAccount">{{user.nomeUser}}</div>
-                    </div>
-                    <div class="bar-icon">
-                        <i class="fa-regular fa-comment"></i>
-                        <i class="fa-solid fa-ellipsis-vertical"></i>
-                    </div>
-                </header>
-                <!-- impostazioni sulle notifiche -->
-                <div id="notifica">
-                    <div id="not_bell">
-                        <i class="fa-solid fa-bell-slash"></i>
-                    </div>
-                    <div>
-                        <div>Ricevi notifiche di nuovi messaggi</div>
-                        <a href="#">Attiva le notifiche desktop</a>
                     </div>
                 </div>
-                <!-- barra di ricerca contatti -->
-                <div id="cerca">
-                    <i class="fa-solid fa-magnifying-glass"></i>
-                    <input type="text" placeholder="Cerca contatto..." v-model="cercaContatto">
-                </div>
-                <!-- lista dei contatti -->
-                <div id="contatti">
-                    <div class="singolo-contatto"  v-for="(contatto, index) in filteredContacts" @click="cambioChat(index)">
-                        <div class="profile-photo">
-                            <img class="avatar" :src="contatto.avatar" alt="immagine profilo">
+                <div class="bot-cont">
+                        <h2 class="tit">Chat</h2>
+                    <!-- barra di ricerca contatti -->
+                    <div id="cerca">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                        <input type="text" placeholder="Cerca contatto..." v-model="cercaContatto">
+                    </div>
+                    <!-- impostazioni sulle notifiche -->
+                    <div id="notifica">
+                        <div id="not_bell">
+                            <i class="fa-solid fa-bell-slash"></i>
                         </div>
-                        <div >
-                            <div class="nome-contatto">{{contatto.name}}</div>
-                            <div class="entry-time">Ultimo messaggio alle {{ getLastMessageDate(contatto) }}</div>
+                        <div>
+                            <div>Ricevi notifiche di nuovi messaggi</div>
+                            <a href="#">Attiva le notifiche desktop</a>
                         </div>
                     </div>
-                </div>
-                <div id="chat-bar">
-                    <i class="fa-solid fa-gear"></i>
-                    <i class="fa-solid fa-comments"></i>
+                    <!-- lista dei contatti -->
+                    <div id="contatti">
+                        <div class="singolo-contatto"  v-for="(contatto, index) in       filteredContacts" @click="cambioChat(index)">
+                            <div class="profile-photo">
+                                <img class="avatar" :src="contatto.avatar" alt="immagine profilo">
+                            </div>
+                            <div >
+                                <div class="nome-contatto">{{contatto.name}}</div>
+                                <div class="entry-time"> {{ getLastMessageText(contatto) }}</div>
+                            </div>
+                            <div >
+                                <div class="mex-time"> {{ getLastMessageDate(contatto) }}</div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </section>
             <!-- sezione con la chat attiva -->
@@ -76,16 +81,18 @@
                         </div>
                         <div>
                             <div class="nome">{{filteredContacts[showContact].name}}</div>
-                            <div class="entry-time"> Ultima data di accesso oggi alle 12:00</div>
+                            <div class="entry-time"> Ultimo messaggio alle {{ getLastMessageDate(filteredContacts[showContact]) }}</div>
                         </div>
                     </div>
                     <div class="bar-icon">
+                        <i class="fa-solid fa-video"></i>
                         <i class="fa-solid fa-magnifying-glass"></i>
-                        <i class="fa-solid fa-paperclip"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
                 </header>
                 <div class="mex-window">
+                    <div class="background col"></div>
+                    <div class="background"></div>
                     <!-- riquadro contenete le chat singole -->
                     <div class="singola-chat">
                         <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in filteredContacts[showContact].messages">
