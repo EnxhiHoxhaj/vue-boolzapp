@@ -49,8 +49,11 @@ main{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 13px;
     color: #eaeff3;
+}
+
+#chat .bar-icon{
+    padding-top: 30px;
 }
 
 #chat .bar-id {
@@ -71,7 +74,7 @@ i {
 }
 
 .bar-icon i {
-    font-size: 20px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -83,7 +86,11 @@ i {
     flex-wrap: wrap;
     align-items: center;
     justify-content: center;
-    gap: 15px;
+
+}
+
+.profile {
+    flex-direction: column;
 }
 
 .avatar-utente {
@@ -102,22 +109,31 @@ i {
 /* side chat */
 /* barra delle notifiche */
 
-.tit{
+.sec-col {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #14214b;
+    color: #dbe3e7;
+    padding: 25px 15px;
     font-size: 18px;
-    padding: 15px 0;
-    background-color: #14214b;;
 }
+
+.sec-col i {
+    padding-left: 20px;
+}
+
 #notifica {
-    height: 55px;
     display: flex;
     align-items: center;
-    padding: 5px 15px;
+    padding: 20px 15px;
     background-color: #14214b;;
+    color: #dbe3e7;
 }
 
 #notifica a {
     font-size: 13px;
-    color: gray; 
+    color: #949ca0;
 }
 
 #not_bell {
@@ -135,24 +151,31 @@ i {
 
 /* barra di ricerca contatti */
 #cerca {
-    border: solid #f5f2f2 6px ;
-    background-color: #14214b;;
+    border: solid #14214b 6px ;
+    background-color: #14214b;
     display: flex;
     align-items: center;
     height: 40px;
+    padding: 0 5px;
 }
 
 #cerca .fa-solid {
     color: #b1b1b1;
-    padding: 5px 15px;
+    padding: 5.5px 15px;
     font-size: 15px;
-    border-right: solid #eaeff3 0.01px ;
+    background-color: #19295c;
+    border-top-left-radius: 5px;
+    border-bottom-left-radius: 5px;
+    border-right: solid #0e1326 1px;
 }
 
 #cerca input {
     flex-grow: 1;
     padding: 5px 5px;
     border-style: none;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: #19295c;
 }
 
 /* lista dei contatti */
@@ -162,13 +185,13 @@ i {
     height: calc(98vh - 135px);
     overflow: auto;
     border-right: solid #21366e 0.1px;
-    padding-bottom: 30px ;
+    padding-bottom: 72px ;
 }
 
 .singolo-contatto {
     background-color: #14214b;
     display: flex;
-    padding: 10px 5px 10px 20px ;
+    padding: 10px 15px ;
     position: relative;
     border-bottom: solid #263e81 0.1px;
     color: #eaeff3;
@@ -182,7 +205,7 @@ i {
     font-size: 10px;
     color: #eaeff3;
     position: absolute;
-    right: 10px;
+    right: 15px;
 }
 
 .singolo-contatto:hover {
@@ -218,6 +241,28 @@ i {
 }
 
 /* live chat section */
+
+#live-chat .bar-icon {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    padding-right: 20px;
+}
+
+#live-chat .user-attivo {
+gap: 15px;
+padding-left: 15px;
+}
+
+#live-chat i {
+margin-bottom: 0;
+}
+
+#live-chat .fa-video  {
+    padding: 8px 16px;
+    border: solid #19295c 1px;
+    border-radius: 25px;
+}
 
 .singola-chat {
     height: calc(96vh - 125px);
