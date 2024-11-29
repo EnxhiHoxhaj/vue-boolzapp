@@ -4,6 +4,7 @@ createApp({
     data() {
         return {
             showContact: 0,
+            selectedContact: null,
             cercaContatto: '',
             userAccount: [
                 {
@@ -297,6 +298,7 @@ createApp({
         // Mostrare la chat e il profilo attivo al click del contatto
         cambioChat(index) {
             this.showContact = index;
+            this.selectedContact = index;
         },
 
         getCurrentTime() {
@@ -364,7 +366,7 @@ createApp({
                 return lastText?.message || 'Messaggio non disponibile';
             }
             return 'Nessun messaggio';
-        }
+        },
         
     },
     mounted() {

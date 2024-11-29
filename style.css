@@ -13,7 +13,6 @@ main{
     width: 100vw;
     height: 100vh;
     background-color: #343236;
-
 }
 
 #window {
@@ -35,8 +34,9 @@ main{
 }
 
 #live-chat {
-    width: 70%
+    width: 70%;
 }
+
 #chat, #live-chat {
     height: 100%;
 }
@@ -64,7 +64,6 @@ main{
 
 .bot-cont{
     width: 85%;
-    background-color: ;
 }
  
 i {
@@ -163,7 +162,7 @@ i {
     height: calc(98vh - 135px);
     overflow: auto;
     border-right: solid #21366e 0.1px;
-    padding-bottom: 10px ;
+    padding-bottom: 30px ;
 }
 
 .singolo-contatto {
@@ -191,6 +190,12 @@ i {
     background-size: cover;
     color: #0e1326;
     cursor: pointer;
+}
+
+.on-contact{
+    background-image: url(img/light-purple-blurred-background-with-glow_1258-41341.jpg) ;
+    background-size: cover;
+    color: #0e1326;
 }
 
 .profile-photo {
