@@ -32,7 +32,93 @@ createApp({
                             date: '2020-01-10T16:15:22',
                             message: 'Tutto fatto!',
                             status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T17:05:22',
+                            message: 'Come è andato l\'incontro?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T17:15:22',
+                            message: 'Alla grande!!',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T17:17:22',
+                            message: 'Fantastico! cosa mangiamo per festeggiare?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T17:18:22',
+                            message: 'Sono indeciso...',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T17:18:40',
+                            message: 'Sushi o pizza?',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T17:20:22',
+                            message: 'Visto che dobbiamo festeggiare farei bisteccha!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T17:21:22',
+                            message: 'Allora prenoto al solito ristorante?',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T17:22:22',
+                            message: 'Ovvio!',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T17:30:22',
+                            message: 'Tavolo riservato, ci vediamo lì per le 20:30! puntuale!',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T17:45:00',
+                            message: 'Hai fatto il pieno alla macchina? È meglio partire tranquilli.',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T17:46:12',
+                            message: 'Sì, tutto a posto! Ho fatto anche il controllo gomme stamattina.',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T18:05:00',
+                            message: 'Perfetto! Allora ci organizziamo per domani per quell’escursione?',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T18:06:35',
+                            message: 'Certo, ho già preparato lo zaino. Porti anche la macchina fotografica?',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T18:07:50',
+                            message: 'Ovviamente! Magari questa volta riusciamo a fotografare il tramonto.',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T18:08:45',
+                            message: 'Ci conto! Lo scorso weekend è stato nuvoloso, ma domani danno bel tempo.',
+                            status: 'received'
+                        },
+                        {
+                            date: '2020-01-10T18:10:15',
+                            message: 'Bene, allora alle 7 pronti a partire! Niente ritardi.',
+                            status: 'sent'
+                        },
+                        {
+                            date: '2020-01-10T18:11:40',
+                            message: 'Promesso! Ora mi riposo un po’, a più tardi.',
+                            status: 'received'
                         }
+                        
                     ],
                 },
                 {
@@ -295,10 +381,13 @@ createApp({
             return  `${hours}:${minutes}`;
         },
 
-        // Mostrare la chat e il profilo attivo al click del contatto
+        // chat e  profilo attivo al click del contatto
         cambioChat(index) {
             this.showContact = index;
             this.selectedContact = index;
+        },
+        deselectChat() {
+            this.selectedContact = null; 
         },
 
         getCurrentTime() {
@@ -306,7 +395,6 @@ createApp({
             return now;
         },
         
-
         addMessage(event) {
             if (event.key === 'Enter') {
                 const newMessage = event.target.value;

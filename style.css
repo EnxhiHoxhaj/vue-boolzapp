@@ -25,6 +25,10 @@ main{
     border-radius: 5px;
 }
 
+.active{
+    display: none;
+}
+
 /* STILE PER LA PARTE CENTRALE DELLA PAGINA */
 /* contenitori window*/
 #chat {
@@ -35,6 +39,7 @@ main{
 
 #live-chat {
     width: 70%;
+    background-color: #14214b;
 }
 
 #chat, #live-chat {
@@ -129,6 +134,7 @@ i {
     padding: 20px 15px;
     background-color: #14214b;;
     color: #dbe3e7;
+    border-bottom: solid #21366e 0.1px;
 }
 
 #notifica a {
@@ -179,14 +185,18 @@ i {
     color: #dbe3e7;
 }
 
+i:hover {
+    color: #febc63;
+}
+
 /* lista dei contatti */
 
 #contatti {
-    background-color: #0e1326;
+    background-color: #19295c;
     height: calc(98vh - 135px);
     overflow: auto;
     border-right: solid #21366e 0.1px;
-    padding-bottom: 82px ;
+    padding-bottom: 85px ;
 }
 
 .singolo-contatto {
@@ -242,6 +252,45 @@ i {
 }
 
 /* live chat section */
+
+.first {
+    background-color: #0e1326;
+    height: 96vh;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.first h2, .first h5 {
+    width: 60%;
+    color: #eaeff3;
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.first button {
+    padding: 10px 15px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.first button:hover {
+    background-color: #febc63;
+    border-color: #febc63;
+}
+
+.cmp {
+    width: 350px;
+}
+
+.cmp img {
+    width: 100%;
+    padding-bottom: 30px;
+}
 
 #live-chat .bar-icon {
     display: flex;

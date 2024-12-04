@@ -85,8 +85,16 @@
                 </div>
             </section>
             <!-- sezione con la chat attiva -->
-            <section id="live-chat">
-                <header class="bar-id">
+            <div class="first" :class="{ nascondi: selectedContact !== null }">
+                <div class="cmp">
+                    <img src="img/pngtree-laptop-illustration-design-png-image_11754217.png" alt="">
+                </div>
+                <h2>Scarica BoolzApp per desktop</h2>
+                <h5>Fai chiamate, videochiama e condividi lo schermo, con vantaggio una navigazione più rapida</h5>
+                <button> download dallo store  </button>
+            </div>
+            <section id="live-chat" :class="{ nascondi: selectedContact === null }">
+                <div class="bar-id">
                     <div class="user-attivo">
                         <div class="avatar-utente">
                             <img  class="user-barra" :src="filteredContacts[showContact].avatar" alt="foto utente">
@@ -101,12 +109,12 @@
                         <i class="fa-solid fa-magnifying-glass"></i>
                         <i class="fa-solid fa-ellipsis-vertical"></i>
                     </div>
-                </header>
+                </div>
                 <div class="mex-window">
                     <div class="background col"></div>
                     <div class="background"></div>
                     <!-- riquadro contenete le chat singole -->
-                    <div class="singola-chat">
+                     <div class="singola-chat">
                         <div :class="message.status === 'sent' ? 'sent' : 'received'" v-for="message in filteredContacts[showContact].messages">
                             <div class="mex">{{ message.message }}</div>
                             <span class="mex-time">{{ formatDate(message.date) }}</span>
